@@ -1,0 +1,35 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+.app {
+  background-color: #1A120B;
+}
+.custom-card {
+  box-shadow: 1px 1px 15px black;
+  background-color: #3C2A21;
+}
+form {
+  background-color: #3C2A21;
+}
+input {
+  height: 45px !important;
+  border: 1px solid #b9b9b9 !important;
+}
+input:focus {
+  outline: none !important;
+  border: 1px solid #b9b9b9 !important;
+}
+label {
+  color: white !important;
+}
+button {
+  height: 45px !important;
+  color: #1A120B !important;
+}
+a {
+  color: #E5E5CB !important;
+}
+
