@@ -2,6 +2,8 @@ import React, { useEffect } from "react";
 import {Form, Button, Input, message } from 'antd';
 import { Link, useNavigate } from "react-router-dom";
 import { LoginUser } from "../../apicalls/users";
+import { useDispatch } from "react-redux";
+import { SetLoader } from "../../redux/loadersSlice";
 
 const rules = [{
     required: true,
@@ -10,16 +12,21 @@ const rules = [{
 
 function Login() {
     const navigate = useNavigate();
+    const dispatch = useDispatch();
     const onFinish = async (values) => {
         try {
+            dispatch(SetLoader(true));
             const response = await LoginUser(values);
+            dispatch(SetLoader(false));
             if (response.success) {
                 message.success(response.message);
                 localStorage.setItem('token', response.data);
+                window.location.href = '/';
             } else {
                 throw new Error(response.message);
             }
         } catch(error) {
+            dispatch(SetLoader(false));
             message.error(error.message);
         }
      };

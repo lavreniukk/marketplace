@@ -11,6 +11,22 @@
   box-shadow: 1px 1px 15px black;
   background-color: #3C2A21;
 }
+.styled-nav {
+  background-color: #3C2A21;
+}
+.cursor-pointer {
+  cursor: pointer;
+}
+.spinner {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.spinner > div {
+  height: 45px;
+  width: 45px;
+}
 form {
   background-color: #3C2A21;
 }
