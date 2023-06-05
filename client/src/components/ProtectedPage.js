@@ -46,7 +46,9 @@ function ProtectedPage({ children }) {
 
                     <div className='py-2 px-3 rounded bg-white d-flex align-items-center'>
                         <i className="ri-user-line me-2"></i>
-                        <span className='text-decoration-underline cursor-pointer uppercase'>{user.name}</span>
+                        <span className='text-decoration-underline cursor-pointer uppercase' onClick={() => {
+                            navigate('/profile');
+                        }}>{user.name}</span>
                         <i className="ri-login-box-line ms-5 cursor-pointer" onClick={() => {
                             localStorage.removeItem('token');
                             navigate('/login');

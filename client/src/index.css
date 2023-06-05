@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Inter', sans-serif;
+  font-size: 16px;
 }
 .app {
   background-color: #1A120B;
@@ -27,12 +28,13 @@
   height: 45px;
   width: 45px;
 }
-form {
-  background-color: #3C2A21;
+.ant-modal, .ant-modal-content {
+  background-color: #3C2A21 !important;
 }
-input {
-  height: 45px !important;
+input, select, textarea {
+  min-height: 45px !important;
   border: 1px solid #b9b9b9 !important;
+  width: 100% !important;
 }
 input:focus {
   outline: none !important;
@@ -47,5 +49,11 @@ button {
 }
 a {
   color: #E5E5CB !important;
+}
+table {
+  border: 3px solid #503f36;
+}
+i {
+  font-size: 20px;
 }
 
